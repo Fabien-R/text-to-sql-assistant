@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "text-to-sql"
+version = "0.1.0"
+description = ""
+authors = ["Fabien R <9103762+Fabien-R@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+crewai = "0.28.8"
+python = ">=3.12,<=3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
