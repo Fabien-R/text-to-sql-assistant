@@ -1,0 +1,33 @@
+{
+    "extends": [
+        "config:base",
+        ":automergeDisabled",
+        "group:recommended",
+        "group:allNonMajor"
+    ],
+    "timezone": "Europe/Paris",
+    "commitMessagePrefix": "⬆️",
+    "prConcurrentLimit": 2,
+    "commitBodyTable": true,
+    "schedule": ["before 4am on Saturday"],
+    "packageRules": [
+        {
+            "matchPaths": [".github/**"],
+            "groupName": "github"
+        },
+        {
+            "matchPackagePrefixes": ["crewai"],
+            "groupName": "crewai",
+            "automerge": false,
+            "automergeSchedule": ["at any time"],
+            "rebaseWhen": "behind-base-branch"
+        },
+        {
+            "matchPackageNames": ["python"],
+            "groupName": "python",
+            "automerge": false,
+            "automergeSchedule": ["at any time"],
+            "rebaseWhen": "behind-base-branch"
+        }
+    ]
+}
