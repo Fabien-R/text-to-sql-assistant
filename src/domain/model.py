@@ -1,0 +1,4 @@
+
+UserInput = str
+
+SQLQuery = str
