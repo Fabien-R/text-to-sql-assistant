@@ -7,6 +7,7 @@ from src.domain.prompts.catalog import column_retriever_prompt, question_transcr
 def retrieve_columns_task(agent: Agent, user_question: UserInput, catalog: UserInput):
     return Task(
         description=column_retriever_prompt(user_question, catalog),
+        expected_output="Bullet list of columns prefixed by their table name",
         agent=agent
     )
 
@@ -14,6 +15,7 @@ def retrieve_columns_task(agent: Agent, user_question: UserInput, catalog: UserI
 def transcribe_question_task(agent: Agent, user_question: UserInput):
     return Task(
         description=question_transcriber_prompt(user_question),
+        expected_output="Transcription of the user's question into natural language",
         agent=agent
     )
 
@@ -21,5 +23,6 @@ def transcribe_question_task(agent: Agent, user_question: UserInput):
 def translate_sql_task(agent: Agent, user_question: UserInput, catalog: UserInput):
     return Task(
         description=sql_translator_prompt(user_question, catalog),
+        expected_output="SQL query",
         agent=agent
     )
