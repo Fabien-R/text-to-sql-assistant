@@ -1,3 +1,6 @@
+## Requirements
+* Python 3.11 (3.12 KO with chroma-hnswlib)
+
 ## Goals
 * First  project in python
 * Play with llms
