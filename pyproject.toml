@@ -9,7 +9,7 @@ readme = "README.md"
 crewai = "0.32.2"
 huggingface-hub = "0.23.4"
 python = "3.11.9"
-python-dotenv = "1.0.1"
+python-dotenv = "1.2.2"
 
 [tool.poetry.group.test.dependencies]
 pytest = "8.2.2"
